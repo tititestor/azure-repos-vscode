@@ -17,3 +17,5 @@ jobs:
         with:
           node-version: 11
       - run: gulp test
+        working-directory: ./src
+
