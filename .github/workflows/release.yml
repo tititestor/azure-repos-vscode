@@ -25,7 +25,7 @@ jobs:
       - run: npm install
       
       - name: set version
-        run: sed -i 's/1.2007.1/'"$RELEASE_VERSION"'/g' ./src/helpers/constants.t
+        run: sed -i 's/1.2007.1/'"$RELEASE_VERSION"'/g' ./src/helpers/constants.ts
 
       - name: publish
         run: vsce publish $RELEASE_VERSION -p ${{ secrets.DEVOPSTOKEN }}
