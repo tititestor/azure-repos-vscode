@@ -36,7 +36,7 @@ jobs:
       - run: git commit -m "Set version"
 
       - run: gulp build
-      - run: gulp test
+      - run: gulp package
 
       - name: publish
         run: vsce publish $RELEASE_VERSION -p ${{ secrets.DEVOPSTOKEN }}
