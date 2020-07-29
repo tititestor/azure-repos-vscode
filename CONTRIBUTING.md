@@ -37,6 +37,10 @@ From the root of the repo, install all of the build dependencies:
 [sudo] npm install --greedy
 ```
 
+### Enusure proper versions
+
+Ensure node version 11.15.0 - use command `n`.
+
 ### Install the Visual Studio Code Extension Manager (VSCE)
 Before packaging via gulp, ensure that you have the "vsce" tool installed globally.  Otherwise, the package step will fail.
 
