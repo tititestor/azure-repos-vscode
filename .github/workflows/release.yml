@@ -16,6 +16,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 11
+      - run: npm install gulp
+      - run: npm install
       - run: gulp test
-        working-directory: ./src
+      - run: gulp build
+      - run: gulp package
 
