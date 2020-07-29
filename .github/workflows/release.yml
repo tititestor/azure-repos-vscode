@@ -28,6 +28,8 @@ jobs:
         run: sed -i 's/1.2007.1/'"$RELEASE_VERSION"'/g' ./src/helpers/constants.ts
       - name: git commit locally
         run: git add ./src/helpers/constants.ts
+      - run: git config --global user.email "devel@argutec.eu"
+      - run: git config --global user.name "Argutec"
       - run: git commit -m "Set version"
 
       - run: gulp test
