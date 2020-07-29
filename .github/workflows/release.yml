@@ -26,6 +26,11 @@ jobs:
       
       - name: set version
         run: sed -i 's/1.2007.1/'"$RELEASE_VERSION"'/g' ./src/helpers/constants.ts
+      - name: git commit locally
+        run: git add ./src/helpers/constants.ts
+        run: git commit -m "Set version"
+
+      - run: gulp test
 
       - name: publish
         run: vsce publish $RELEASE_VERSION -p ${{ secrets.DEVOPSTOKEN }}
