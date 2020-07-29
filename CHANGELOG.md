@@ -1,4 +1,4 @@
-## [v1.2007.13] (2020-07-29)
+## v1.2007.14 (2020-07-29)
 
 - Temporarily disabled reinitialization in case of onDidChangeConfiguration that caused constant reloading of repository. In future it should be changed to detect only relevant configuration changes and perform reload only when needed.
 
