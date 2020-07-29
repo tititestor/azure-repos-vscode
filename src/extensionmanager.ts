@@ -55,8 +55,8 @@ export class ExtensionManager implements Disposable {
         if (workspace) {
             workspace.onDidChangeConfiguration(() => {
                 Logger.LogDebug("Reinitializing due to onDidChangeConfiguration");
-                //FUTURE: Check to see if we really need to do the re-initialization
-                this.Reinitialize();
+                // TODO: Check to see if we really need to do the re-initialization
+                // this.Reinitialize();
             });
         }
     }
