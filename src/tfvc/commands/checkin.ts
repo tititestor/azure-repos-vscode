@@ -93,7 +93,7 @@ export class Checkin implements ITfvcCommand<string> {
             builder.AddSwitchWithValue("comment", this.getComment(), false);
         }
         // TF.EXE doesn't support associating work items with checkin
-        //builder.AddSwitchWithValue("associate", this.getAssociatedWorkItems(), false);
+        builder.AddSwitchWithValue("override", this.getAssociatedWorkItems(), false);
 
         return builder;
     }
